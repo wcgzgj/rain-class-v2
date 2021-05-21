@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
+import axios from 'axios'
+
+// 修改axios的baseUrl，这样axios就不用每次都在请求中填写 VUE_APP_SERVER  了
+axios.defaults.baseURL=process.env.VUE_APP_SERVER;
 
 const app = createApp(App)
     app
