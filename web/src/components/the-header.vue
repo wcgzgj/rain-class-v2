@@ -21,23 +21,23 @@
             </a-menu-item>
 
             <a-menu-item key="2">
-                <router-link to="#">下载区</router-link>
+                <router-link to="/download">下载区</router-link>
             </a-menu-item>
 
             <a-menu-item key="3">
-                <router-link to="#">成绩查询</router-link>
+                <router-link to="/score-search">成绩查询</router-link>
             </a-menu-item>
 
             <a-menu-item key="4">
-                <router-link to="#">留言板</router-link>
+                <router-link to="/comment">留言板</router-link>
             </a-menu-item>
 
             <a-menu-item key="5">
-                <router-link to="#">网上测试</router-link>
+                <router-link to="/online-test">网上测试</router-link>
             </a-menu-item>
 
-            <a-menu-item key="/about">
-                <router-link to="/about">关于我们</router-link>
+            <a-menu-item key="/about-us">
+                <router-link to="/about-us">关于我们</router-link>
             </a-menu-item>
 
 
