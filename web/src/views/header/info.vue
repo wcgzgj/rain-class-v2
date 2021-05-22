@@ -5,60 +5,21 @@
 
             <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
                 <a-typography>
-                    <a-typography-title>Introduction</a-typography-title>
-                    <a-typography-paragraph>
-                        In the process of internal desktop applications development, many different design specs and
-                        implementations would be involved, which might cause designers and developers difficulties and
-                        duplication and reduce the efficiency of development.
-                    </a-typography-paragraph>
-                    <a-typography-paragraph>
-                        After massive project practice and summaries, Ant Design, a design language for background
-                        applications, is refined by Ant UED Team, which aims to
-                        <a-typography-text strong>
-                            uniform the user interface specs for internal background projects, lower the unnecessary
-                            cost of design differences and implementation and liberate the resources of design and
-                            front-end development.
-                        </a-typography-text>
-                    </a-typography-paragraph>
-                    <a-typography-title :level="2">Guidelines and Resources</a-typography-title>
-                    <a-typography-paragraph>
-                        We supply a series of design principles, practical patterns and high quality design resources
-                        (
-                        <a-typography-text code>Sketch</a-typography-text>
-                        and
-                        <a-typography-text code>Axure</a-typography-text>
-                        ), to help people create their product prototypes beautifully and efficiently.
-                    </a-typography-paragraph>
-
-                    <a-typography-paragraph>
-                        <ul>
-                            <li>
-                                <a-typography-link href="/docs/resources">Resource Download</a-typography-link>
-                            </li>
-                        </ul>
-                    </a-typography-paragraph>
-
-                    <a-typography-paragraph>
-                        Press
-                        <a-typography-text keyboard>Esc</a-typography-text>
-                        to exit...
-                    </a-typography-paragraph>
-
-                    <a-divider />
 
                     <a-typography-title>介绍</a-typography-title>
                     <a-typography-paragraph>
-                        蚂蚁的企业级产品是一个庞大且复杂的体系。这类产品不仅量级巨大且功能复杂，而且变动和并发频繁，常常需要设计与开发能够快速的做出响应。同时这类产品中有存在很多类似的页面以及组件，可以通过抽象得到一些稳定且高复用性的内容。
+                        在线学习（英语：Online Learning）是一种透过互联网工具来学习或训练的方式。在中国在线学习发展趋势是职业考试和个人能力提高，将一种方便、效率、低成本的学习模式。分为两类：
+                        职业考试，个人技能提高。
+                        企业内的在线学习是让员工透过互联网或企业内部网的工具来进行远程教育，由企业人力资源部门承办教育训练的单位将训练课程及测验题库安装于学习平台的数据库内，员工经由职务需求或前测验证程序后，选定课程内容，自行或强制指定学习进度，并于课程学习完成后进行测验，学习平台会将学员的学习时间、成绩及学习成果问卷、调查结果等数据都详细的记录下来，以作为企业日后调整与改善人力资源与教育训练策略之参考依据。
                     </a-typography-paragraph>
                     <a-typography-paragraph>
-                        随着商业化的趋势，越来越多的企业级产品对更好的用户体验有了进一步的要求。带着这样的一个终极目标，我们（蚂蚁金服体验技术部）经过大量的项目实践和总结，逐步打磨出一个服务于企业级产品的设计体系
-                        Ant Design。基于
+                        随着商业化的趋势，越来越多的企业级产品对更好的用户体验有了进一步的要求。带着这样的一个终极目标，我们经过大量的项目实践和总结，逐步打磨出一个服务于高校的
                         <a-typography-text mark>『确定』和『自然』</a-typography-text>
-                        的设计价值观，通过模块化的解决方案，降低冗余的生产成本，让设计者专注于
+                        的设计价值观，通过模块化的解决方案，降低冗余的生产成本，让使用者沉浸于
                         <a-typography-text strong>更好的用户体验</a-typography-text>
                         。
                     </a-typography-paragraph>
-                    <a-typography-title :level="2">设计资源</a-typography-title>
+                    <a-typography-title :level="2">使用方案</a-typography-title>
                     <a-typography-paragraph>
                         我们提供完善的设计原则、最佳实践和设计资源文件（
                         <a-typography-text code>Sketch</a-typography-text>

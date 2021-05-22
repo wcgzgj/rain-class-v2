@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
+import HomeView from '../views/home-view.vue'
 import About from '../views/About.vue'
 import Info from '../views/header/info.vue'
 import Download from '../views/header/download.vue'
@@ -9,13 +10,34 @@ import OnlineTest from '../views/header/online-test.vue'
 import AboutUs from '../views/header/about-us.vue'
 import DownloadPage from '../views/all/download-page.vue'
 
+import SelectClass from '../views/student/select-class.vue'
+import ClassResult from '../views/student/class-result.vue'
+
 
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    redirect: '/home-view',
+    children: [
+      {
+        path: 'home-view',
+        name: 'HomeView',
+        component: HomeView
+      },
+      {
+        path: 'select-class',
+        name: 'SelectClass',
+        component: SelectClass
+      },
+      {
+        path: 'class-result',
+        name: 'ClassResult',
+        component: ClassResult
+      }
+    ]
   },
   {
     path: '/about',
@@ -56,7 +78,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/download-page',
     name: 'DownloadPage',
     component: DownloadPage
-  }
+  },
 ]
 
 const router = createRouter({

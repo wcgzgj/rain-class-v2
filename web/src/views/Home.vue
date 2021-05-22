@@ -10,8 +10,12 @@
               <span>学生操作</span>
             </span>
           </template>
-          <a-menu-item key="1">学生选课</a-menu-item>
-          <a-menu-item key="2">选课结果查询</a-menu-item>
+          <router-link to="/select-class">
+            <a-menu-item key="1">学生选课</a-menu-item>
+          </router-link>
+          <router-link to="/class-result">
+            <a-menu-item key="2">选课结果查询</a-menu-item>
+          </router-link>
         </a-sub-menu>
         <a-sub-menu key="sub2">
           <template #title>
@@ -38,43 +42,12 @@
         </a-breadcrumb>
         <div :style="{ padding: '24px', background: '#fff', minHeight: '360px' }">
 
-          <a-list item-layout="vertical" size="large" :pagination="pagination" :data-source="listData">
-            <template #footer>
-              <div style="text-align: center">
-                <b>课程列表</b>
-                <br/>
-                雨选课
-              </div>
-            </template>
-            <template #renderItem="{ item }">
-              <a-list-item key="item.title">
-                <template #actions>
-          <span v-for="{ type, text } in actions" :key="type">
-            <component v-bind:is="type" style="margin-right: 8px" />
-            {{ text }}
-          </span>
-                </template>
-                <template #extra>
-                  <img
-                          width="272"
-                          alt="logo"
-                          src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-                  />
-                </template>
-                <a-list-item-meta :description="item.description">
-                  <template #title>
-                    <a :href="item.href">{{ item.title }}</a>
-                  </template>
-                  <template #avatar><a-avatar :src="item.avatar" /></template>
-                </a-list-item-meta>
-                {{ item.content }}
-              </a-list-item>
-            </template>
-          </a-list>
-
+          <router-view />
 
         </div>
       </a-layout-content>
+
+
       <a-layout-footer style="text-align: center">
         雨选课 ©2021 Created by FARO_Z
       </a-layout-footer>

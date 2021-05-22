@@ -6,8 +6,11 @@
             <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
 
                 <a-skeleton avatar :paragraph="{ rows: 4 }" />
+                <a-divider />
                 <a-skeleton avatar :paragraph="{ rows: 4 }" />
+                <a-divider />
                 <a-skeleton avatar :paragraph="{ rows: 4 }" />
+                <a-divider />
                 <a-skeleton avatar :paragraph="{ rows: 4 }" />
 
             </div>
