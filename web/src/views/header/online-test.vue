@@ -3,7 +3,14 @@
     <a-layout>
         <a-layout-content :style="{ padding: '0 50px', marginTop: '64px' }">
 
-            <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">Content</div>
+            <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
+
+                <a-skeleton avatar :paragraph="{ rows: 4 }" />
+                <a-skeleton avatar :paragraph="{ rows: 4 }" />
+                <a-skeleton avatar :paragraph="{ rows: 4 }" />
+                <a-skeleton avatar :paragraph="{ rows: 4 }" />
+
+            </div>
         </a-layout-content>
         <a-layout-footer :style="{ textAlign: 'center' }">
             雨选课 ©2021 Created by FARO_Z
