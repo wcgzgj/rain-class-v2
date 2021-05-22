@@ -7,6 +7,9 @@ import ScoreSearch from '../views/header/score-search.vue'
 import Comment from '../views/header/comment.vue'
 import OnlineTest from '../views/header/online-test.vue'
 import AboutUs from '../views/header/about-us.vue'
+import DownloadPage from '../views/all/download-page.vue'
+
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -48,6 +51,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/about-us',
     name: 'AboutUs',
     component: AboutUs
+  },
+  {
+    path: '/download-page',
+    name: 'DownloadPage',
+    component: DownloadPage
   }
 ]
 

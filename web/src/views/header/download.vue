@@ -9,7 +9,7 @@
                     <template #renderItem="{ item }">
                         <a-list-item>
                             <a-card :title="item.title">
-                                <router-link to="/">
+                                <router-link to="/download-page">
                                     点击了解更多
                                 </router-link>
                             </a-card>
