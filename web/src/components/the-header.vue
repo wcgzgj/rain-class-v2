@@ -9,15 +9,15 @@
         >
 
             <a-menu-item key="/">
-                <router-link to="/">首页</router-link>
+                <router-link to="/">雨选课</router-link>
             </a-menu-item>
 
             <!--<a-menu-item key="/admin/user" :style="user.id? {} : {display:'none'}">-->
             <!--    <router-link to="/admin/user">用户管理</router-link>-->
             <!--</a-menu-item>-->
 
-            <a-menu-item key="#">
-                <router-link to="#">行业信息</router-link>
+            <a-menu-item key="/info">
+                <router-link to="/info">行业信息</router-link>
             </a-menu-item>
 
             <a-menu-item key="2">
