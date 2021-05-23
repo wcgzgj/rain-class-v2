@@ -108,18 +108,18 @@
 </script>
 
 <style scoped>
-    #components-layout-demo-fixed .logo {
-        width: 120px;
-        height: 31px;
-        background: rgba(255, 255, 255, 0.2);
-        margin: 16px 24px 16px 0;
-        float: left;
-    }
-    .site-layout .site-layout-background {
-        background: #fff;
-    }
+    /*#components-layout-demo-fixed .logo {*/
+    /*    width: 120px;*/
+    /*    height: 31px;*/
+    /*    background: rgba(255, 255, 255, 0.2);*/
+    /*    margin: 16px 24px 16px 0;*/
+    /*    float: left;*/
+    /*}*/
+    /*.site-layout .site-layout-background {*/
+    /*    background: #fff;*/
+    /*}*/
 
-    [data-theme='dark'] .site-layout .site-layout-background {
-        background: #141414;
-    }
+    /*[data-theme='dark'] .site-layout .site-layout-background {*/
+    /*    background: #141414;*/
+    /*}*/
 </style>
