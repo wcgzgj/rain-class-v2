@@ -17,6 +17,11 @@ import ClassResult from '../views/student/class-result.vue'
 import ClassManage from '../views/teacher/class-manage.vue'
 import ChangeClassInfo from '../views/teacher/change-class-info.vue'
 
+import ScoreCount from '../views/teacher/score-count.vue'
+import ScoreAnalyse from '../views/teacher/score-analyse.vue'
+import ScoreAlert from '../views/teacher/score-alert.vue'
+import ScoreInfo from '../views/teacher/score-info.vue'
+
 
 
 
@@ -52,7 +57,27 @@ const routes: Array<RouteRecordRaw> = [
         path: 'change-class-info',
         name: 'ChangeClassInfo',
         component: ChangeClassInfo
-      }
+      },
+      {
+        path: 'score-count',
+        name: 'ScoreCount',
+        component: ScoreCount
+      },
+      {
+        path: 'score-analyse',
+        name: 'ScoreAnalyse',
+        component: ScoreAnalyse
+      },
+      {
+        path: 'score-alert',
+        name: 'ScoreAlert',
+        component: ScoreAlert
+      },
+      {
+        path: 'score-info',
+        name: 'ScoreInfo',
+        component: ScoreInfo
+      },
     ]
   },
   {

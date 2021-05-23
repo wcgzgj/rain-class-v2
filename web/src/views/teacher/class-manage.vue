@@ -28,7 +28,7 @@
                 <a>详情 一 {{ record.name }}</a>
                 <a-divider type="vertical" />
               <router-link to="/change-class-info">
-                  <b>修改</b>
+                  修改
               </router-link>
 
               </span>

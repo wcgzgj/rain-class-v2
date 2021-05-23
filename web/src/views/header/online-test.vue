@@ -5,13 +5,16 @@
 
             <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
 
-                <a-skeleton avatar :paragraph="{ rows: 4 }" />
-                <a-divider />
-                <a-skeleton avatar :paragraph="{ rows: 4 }" />
-                <a-divider />
-                <a-skeleton avatar :paragraph="{ rows: 4 }" />
-                <a-divider />
-                <a-skeleton avatar :paragraph="{ rows: 4 }" />
+                <a-result
+                        status="success"
+                        title="本站已安全运行30天"
+                        sub-title="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
+                >
+                    <template #extra>
+                        <a-button key="console" type="primary">返回首页</a-button>
+                        <a-button key="buy">探寻更多</a-button>
+                    </template>
+                </a-result>
 
             </div>
         </a-layout-content>
