@@ -24,7 +24,9 @@
               <span>老师操作</span>
             </span>
           </template>
-          <a-menu-item key="3">选课管理</a-menu-item>
+          <router-link to="/class-manage">
+            <a-menu-item key="3">选课管理</a-menu-item>
+          </router-link>
           <a-menu-item key="4">成绩导入</a-menu-item>
           <a-menu-item key="5">成绩计算</a-menu-item>
           <a-menu-item key="6">成绩分析</a-menu-item>

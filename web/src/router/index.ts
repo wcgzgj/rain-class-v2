@@ -14,6 +14,12 @@ import SelectClass from '../views/student/select-class.vue'
 import ClassResult from '../views/student/class-result.vue'
 
 
+import ClassManage from '../views/teacher/class-manage.vue'
+import ChangeClassInfo from '../views/teacher/change-class-info.vue'
+
+
+
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -36,6 +42,16 @@ const routes: Array<RouteRecordRaw> = [
         path: 'class-result',
         name: 'ClassResult',
         component: ClassResult
+      },
+      {
+        path: 'class-manage',
+        name: 'ClassManage',
+        component: ClassManage
+      },
+      {
+        path: 'change-class-info',
+        name: 'ChangeClassInfo',
+        component: ChangeClassInfo
       }
     ]
   },

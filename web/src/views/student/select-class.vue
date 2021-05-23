@@ -18,13 +18,13 @@
                 @finishFailed="handleFinishFailed"
         >
             <a-form-item>
-                <a-input v-model:value="formState.user" placeholder="Username">
-                    <template #prefix><UserOutlined style="color: rgba(0, 0, 0, 0.25)" /></template>
+                <a-input v-model:value="formState.user" placeholder="课程名称">
+
                 </a-input>
             </a-form-item>
             <a-form-item>
-                <a-input v-model:value="formState.password" type="password" placeholder="Password">
-                    <template #prefix><LockOutlined style="color: rgba(0, 0, 0, 0.25)" /></template>
+                <a-input v-model:value="formState.password"  placeholder="课程编号">
+
                 </a-input>
             </a-form-item>
             <a-form-item>
@@ -32,7 +32,7 @@
                         type="primary"
                         html-type="submit"
                 >
-                    Log in
+                    查找
                 </a-button>
             </a-form-item>
         </a-form>
@@ -58,14 +58,13 @@
                         <img
                                 width="272"
                                 alt="logo"
-                                src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
+                                src="../../assets/数据结构.jpg"
                         />
                     </template>
                     <a-list-item-meta :description="item.description">
                         <template #title>
                             <a :href="item.href">{{ item.title }}</a>
                         </template>
-                        <template #avatar><a-avatar :src="item.avatar" /></template>
                     </a-list-item-meta>
                     {{ item.content }}
                 </a-list-item>
@@ -92,12 +91,11 @@
     for (let i = 0; i < 23; i++) {
         listData.push({
             href: 'https://www.antdv.com/',
-            title: `ant design vue part ${i}`,
-            avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+            title: `数据结构 ${i}`,
             description:
-                'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+                '课程介绍',
             content:
-                'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+                '数据结构（英语：data structure）是计算机中存储、组织数据的方式。数据结构是一种具有一定逻辑关系，在计算机中应用某种存储结构，并且封装了相应操作的数据元素集合。它包含三方面的内容，逻辑关系、存储关系及操作。',
         });
     }
 
