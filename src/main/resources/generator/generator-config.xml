@@ -40,8 +40,10 @@
                              targetPackage="rainclassv2.mapper"
                              type="XMLMAPPER"/>
 
-        <table tableName="demo" domainObjectName="Demo"/>
-        <!--<table tableName="ebook"/>-->
+        <!--<table tableName="demo" domainObjectName="Demo"/>-->
+        <!--<table tableName="stu"/>-->
+        <table tableName="sta"/>
+        <!--<table tableName="stusta"/>-->
         <!--<table tableName="category"/>-->
         <!--<table tableName="doc"/>-->
         <!--<table tableName="content"/>-->

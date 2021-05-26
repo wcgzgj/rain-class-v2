@@ -27,6 +27,10 @@ import ClassInfo from '../views/class/class-info.vue'
 import MyClassInfo from '../views/student/my-class-info.vue'
 
 
+import MakeTest from '../views/teacher/make-test.vue'
+import DoTest from '../views/student/do-test.vue'
+
+
 
 
 
@@ -123,6 +127,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/online-test',
     name: 'OnlineTest',
     component: OnlineTest
+  },
+  {
+    path: '/make-test',
+    name: 'MakeTest',
+    component: MakeTest
+  },
+  {
+    path: '/do-test',
+    name: 'DoTest',
+    component: DoTest
   },
   {
     path: '/about-us',

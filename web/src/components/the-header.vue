@@ -33,7 +33,7 @@
             </a-menu-item>
 
             <a-menu-item key="5">
-                <router-link to="/online-test">网上测试</router-link>
+                <router-link to="/make-test">网上测试</router-link>
             </a-menu-item>
 
             <a-menu-item key="/about-us">
@@ -64,11 +64,40 @@
             <a class="login-menu" @click="showLoginModal" v-show="!user.id">
                 <span>登录</span>
             </a>
+            <a class="login-menu" @click="showRegisterModal" v-show="!user.id">
+                <span>注册</span>
+            </a>
 
         </a-menu>
     </a-layout-header>
 
 
+    <!--注册-->
+    <!--<a-modal-->
+    <!--        title="注册表单"-->
+    <!--        v-model:visible="registerModalVisible"-->
+    <!--        :confirm-loading="registerModalLoading"-->
+    <!--        @ok="login"-->
+    <!--&gt;-->
+    <!--    <a-form :model="loginUser" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">-->
+    <!--        <a-form-item label="用户名">-->
+    <!--            <a-input v-model:value="loginUser.loginName" />-->
+    <!--        </a-form-item>-->
+    <!--        <a-form-item label="密码">-->
+    <!--            <a-input v-model:value="loginUser.password" type="password"/>-->
+    <!--        </a-form-item>-->
+    <!--        <a-form-item label="身份选择">-->
+    <!--            <a-radio-group v-model:value="role" button-style="solid">-->
+    <!--                <a-radio-button value="stu">学生</a-radio-button>-->
+    <!--                <a-radio-button value="sta">老师</a-radio-button>-->
+    <!--                <a-radio-button value="admin">管理员</a-radio-button>-->
+    <!--            </a-radio-group>-->
+    <!--        </a-form-item>-->
+    <!--    </a-form>-->
+    <!--</a-modal>-->
+
+
+    <!--登录-->
     <a-modal
             title="登录表单"
             v-model:visible="loginModalVisible"
@@ -81,6 +110,13 @@
             </a-form-item>
             <a-form-item label="密码">
                 <a-input v-model:value="loginUser.password" type="password"/>
+            </a-form-item>
+            <a-form-item label="身份选择">
+                <a-radio-group v-model:value="role" button-style="solid">
+                    <a-radio-button value="stu">学生</a-radio-button>
+                    <a-radio-button value="sta">老师</a-radio-button>
+                    <a-radio-button value="admin">管理员</a-radio-button>
+                </a-radio-group>
             </a-form-item>
         </a-form>
     </a-modal>
@@ -105,6 +141,10 @@
                 password: "abc123"
             };
 
+            // 登录人角色单选框
+            const role=ref();
+            role.value="stu";
+
             const user = computed(() => store.state.user);
 
             const loginModalVisible = ref();
@@ -117,6 +157,10 @@
                 loginModalVisible.value=true;
             }
 
+            const showRegisterModal = () => {
+
+            }
+
 
             /**
              * 登录
@@ -126,6 +170,8 @@
                 loginModalLoading.value=true;
 
                 loginUser.value.password = hexMd5(loginUser.value.password + KEY);
+                //每次登录的时候，要将选择的角色，一并选中
+                loginUser.value.role=role.value;
 
                 axios.post("/user/login",loginUser.value).then((response)=>{
                     loginModalLoading.value=false;
@@ -182,6 +228,7 @@
                 loginModalVisible,
                 loginModalLoading,
                 user,
+                role,
 
                 //method
                 showLoginModal,
