@@ -1,4 +1,4 @@
-<!--课程管理-->
+<!-- 成绩导入 -->
 <template>
     <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
 

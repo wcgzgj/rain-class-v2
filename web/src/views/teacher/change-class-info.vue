@@ -1,4 +1,4 @@
-<!--修改自己的课程信息-->
+<!-- 修稿课程信息，可以点击编辑修改学生成绩 -->
 <template>
     <div :style="{ background: '#fff', padding: '24px', minHeight: '380px' }">
 
@@ -59,14 +59,8 @@
             </template>
             <template #operation="{ record }">
                 <div class="editable-row-operations">
-                    <span v-if="editableData[record.key]">
-                      <a @click="save(record.key)">Save</a>
-                      <a-popconfirm title="Sure to cancel?" @confirm="cancel(record.key)">
-                        <a>Cancel</a>
-                      </a-popconfirm>
-                    </span>
-                    <span v-else>
-                      <a @click="edit(record.key)">Edit</a>
+                    <span>
+                      <a @click="showEditModel()">编辑</a>
                     </span>
                 </div>
             </template>
@@ -76,11 +70,26 @@
     </div>
 
 
+    <a-modal
+            title="成绩修改"
+            v-model:visible="editModalVisible"
+            :confirm-loading="editModalLoading"
+            @ok="changeScore"
+    >
+        <a-form :model="stuScore" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+            <a-form-item label="成绩">
+                <a-input v-model:value="stuScore"/>
+            </a-form-item>
+        </a-form>
+    </a-modal>
+
+
 </template>
 
 <script lang="ts">
     import { ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons-vue';
-    import { defineComponent, reactive, ref, UnwrapRef } from 'vue';
+    import {computed, defineComponent, reactive, ref, UnwrapRef} from 'vue';
+    import store from "@/store";
 
 
     const columns = [
@@ -144,6 +153,21 @@
             const cancel = (key: string) => {
                 delete editableData[key];
             };
+
+
+            const editModalVisible = ref();
+            editModalVisible.value=false;
+
+            const editModalLoading = ref();
+            editModalLoading.value=false;
+
+            const showEditModel= ()=> {
+                editModalVisible.value=true;
+            }
+
+            const stuScore = ref();
+            stuScore.value=98;
+
             return {
                 dataSource,
                 columns,
@@ -152,6 +176,12 @@
                 edit,
                 save,
                 cancel,
+
+                editModalVisible,
+                editModalLoading,
+                showEditModel,
+                stuScore
+
             };
         },
     }

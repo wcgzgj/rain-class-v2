@@ -63,7 +63,9 @@
                     </template>
                     <a-list-item-meta :description="item.description">
                         <template #title>
-                            <a :href="item.href">{{ item.title }}</a>
+                            <router-link :to="item.href">
+                                {{ item.title }}
+                            </router-link>
                         </template>
                     </a-list-item-meta>
                     {{ item.content }}
@@ -90,7 +92,7 @@
 
     for (let i = 0; i < 23; i++) {
         listData.push({
-            href: 'https://www.antdv.com/',
+            href: '/class-info',
             title: `数据结构 ${i}`,
             description:
                 '课程介绍',

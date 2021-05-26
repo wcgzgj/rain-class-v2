@@ -23,6 +23,10 @@ import ScoreAlert from '../views/teacher/score-alert.vue'
 import ScoreInfo from '../views/teacher/score-info.vue'
 
 
+import ClassInfo from '../views/class/class-info.vue'
+import MyClassInfo from '../views/student/my-class-info.vue'
+
+
 
 
 
@@ -77,6 +81,16 @@ const routes: Array<RouteRecordRaw> = [
         path: 'score-info',
         name: 'ScoreInfo',
         component: ScoreInfo
+      },
+      {
+        path: 'class-info',
+        name: 'ClassInfo',
+        component: ClassInfo
+      },
+      {
+        path: 'my-class-info',
+        name: 'MyClassInfo',
+        component: MyClassInfo
       },
     ]
   },

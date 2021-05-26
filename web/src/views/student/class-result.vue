@@ -1,3 +1,4 @@
+<!--选课结果-->
 <template>
     <!--<a-layout>-->
     <!--    <a-layout-content :style="{ padding: '0 50px', marginTop: '64px' }">-->
@@ -18,23 +19,23 @@
                 </div>
             </template>
             <template #renderItem="{ item }">
-                <a-list-item key="item.title">
+                <!--这里是list的key值，暂时还没想好些什么-->
+                <a-list-item key="key" >
                     <a-card hoverable style="width: 300px">
                         <template #cover>
                             <img
                                     alt="example"
-                                    src="../../assets/编译原理.jpg"
+                                    src="../../assets/数据结构.jpg"
                             />
                         </template>
                         <a-card-meta title="课程介绍" :description="item.content">
 
                         </a-card-meta>
-                        <template class="ant-card-actions" #actions>
-                            <setting-outlined key="setting" />
-                            <edit-outlined key="edit" />
-                            <ellipsis-outlined key="ellipsis" />
-                        </template>
 
+                        <br/>
+                        <router-link to="/my-class-info">
+                            <a-button type="primary">查看详情</a-button>
+                        </router-link>
                     </a-card>
                 </a-list-item>
             </template>
@@ -56,14 +57,14 @@
 
     const listData: Record<string, string>[] = [];
 
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 1; i++) {
         listData.push({
-            href: '../../assets/编译原理.jpg',
-            title: `编译原理 ${i}`,
+            href: '../../assets/数据结构.jpg',
+            title: `数据结构 ${i}`,
             description:
                 '课程介绍',
             content:
-                '编译原理》（英语：Compilers: Principles, Techniques, and Tools）是一部由阿尔佛雷德·艾侯、拉维·塞提和杰弗瑞·乌尔曼合著的计算机科学教材，探讨了编译器设计方面的若干重要课题，被视为编译原理领域的经典教材之一。',
+                '数据结构（英语：data structure）是计算机中存储、组织数据的方式。数据结构是一种具有一定逻辑关系，在计算机中应用某种存储结构，并且封装了相应操作的数据元素集合。它包含三方面的内容，逻辑关系、存储关系及操作。',
         });
     }
 
