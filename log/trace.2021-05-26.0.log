@@ -1,0 +1,10 @@
+2021-05-26 12:02:44.851 INFO  rainclassv2.service.impl.StuServiceImplTest       :55   [32m                  [0;39m Starting StuServiceImplTest using Java 1.8.0_231 on FARO-ZdeMacBook-Pro.local with PID 47982 (started by faro_z in /Users/faro_z/文件/坚果云/编程代码存储路径/java/项目开发/rain-class-v2)
+2021-05-26 12:02:44.855 INFO  rainclassv2.service.impl.StuServiceImplTest       :664  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-05-26 12:02:44.860 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.1.7.Final
+2021-05-26 12:02:45.658 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :128  [32m                  [0;39m Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-05-26 12:02:45.669 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :188  [32m                  [0;39m Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2021-05-26 12:02:47.775 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-05-26 12:02:48.147 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-05-26 12:02:48.312 INFO  rainclassv2.service.impl.StuServiceImplTest       :61   [32m                  [0;39m Started StuServiceImplTest in 3.881 seconds (JVM running for 4.874)
+2021-05-26 12:02:48.723 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-05-26 12:02:48.738 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.

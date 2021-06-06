@@ -41,8 +41,8 @@
                              type="XMLMAPPER"/>
 
         <!--<table tableName="demo" domainObjectName="Demo"/>-->
-        <!--<table tableName="stu"/>-->
-        <table tableName="sta"/>
+        <table tableName="test"/>
+        <!--<table tableName="class"/>-->
         <!--<table tableName="stusta"/>-->
         <!--<table tableName="category"/>-->
         <!--<table tableName="doc"/>-->

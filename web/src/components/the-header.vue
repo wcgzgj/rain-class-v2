@@ -32,7 +32,6 @@
                 <router-link to="/comment">留言板</router-link>
             </a-menu-item>
 
-            <!--<a-menu-item key="5">-->
             <!--    <router-link to="/make-test">网上测试</router-link>-->
             <!--</a-menu-item>-->
 

@@ -17,10 +17,9 @@ import javax.validation.constraints.NotNull;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class PageReq {
     @NotNull(message = "【页码】不能为空")
-    private int page;
+    private int page = 1;
 
     /**
      * 之所以要对每页条数做限制
@@ -31,5 +30,5 @@ public class PageReq {
      */
     @NotNull(message = "【每页条数】不能为空")
     @Max(value = 1000,message = "【每页条数】不能超过1000")
-    private int size;
+    private int size = 5;
 }

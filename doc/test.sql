@@ -23,3 +23,5 @@ insert into `demo` (id,name) values(2,'测试2');
 
 
 drop table if exists demo;
+
+select * from class where classname like '%%';

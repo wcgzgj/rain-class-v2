@@ -1,3 +1,13 @@
+# demo 表
+drop table if exists `test`;
+create table `test` (
+                           `id` bigint not null comment 'id',
+                           `name` varchar(255) comment '接口测试',
+                           primary key (`id`)
+) engine=innodb default charset=utf8mb4 comment='测试表';
+
+
+
 # 学生表
 drop table if exists `student`;
 create table `student` (
@@ -55,7 +65,7 @@ drop table if exists `class`;
 create table `class` (
                            `id` bigint not null comment 'id',
                            `classname` varchar(50) comment '课程名称',
-                           `teacher` bigint comment '教师id',
+                           `teacherid` bigint comment '教师id',
                            `starttime` varchar(255)  comment '上课时间',
                            `code` varchar(50)  comment '课程编号',
                            `place` varchar(50)  comment '上课地点',
