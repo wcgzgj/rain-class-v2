@@ -44,13 +44,7 @@
             //课程列表
             const classList = ref();
 
-            //分页参数
-            // const pagination = ref({
-            //     current: 1,
-            //     pageSize: 3,
-            //     total: 0
-            // });
-
+            //分页及响应函数
             const pagination = {
                 onChange: page => {
                     handleQuery({
@@ -67,24 +61,9 @@
              * 每次到当前页面时，执行查询
              */
             const handleQueryClass = () => {
-                axios.get("/class/list",{
-                    params: {
-                        page:1,
-                        //固定每页三条
-                        size: 9,
-                    }
-                }).then(resp=>{
-                    const data=resp.data;
-                    if(data.success) {
-                        classList.value=data.content.list;
-                        const total = data.content.total
-                        pagination.total=total;
-                        console.log("查询到的总条数为:"+total)
-                        console.log("查询到的课程信息为:"+classList.value);
-                        message.success("课程查询成功");
-                    } else {
-                        message.error(data.message);
-                    }
+                handleQuery({
+                    page:1,
+                    size:9
                 })
             }
 
@@ -111,19 +90,6 @@
                     }
                 })
             }
-
-            /**
-             * 分页响应函数
-             * @param pagination
-             */
-            // const handleTableChange = (pagination) => {
-            //     alert("触发了分页函数")
-            //     console.log("看看自带的分页参数都有啥：" + JSON.stringify(pagination));
-            //     handleQuery({
-            //         page: pagination.current,
-            //         size: pagination.pageSize
-            //     });
-            // };
 
 
             onMounted(()=>{

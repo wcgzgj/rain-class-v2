@@ -112,8 +112,8 @@
             </a-form-item>
             <a-form-item label="身份选择">
                 <a-radio-group v-model:value="role" button-style="solid">
-                    <a-radio-button value="stu">学生</a-radio-button>
-                    <a-radio-button value="sta">老师</a-radio-button>
+                    <a-radio-button value="student">学生</a-radio-button>
+                    <a-radio-button value="teacher">老师</a-radio-button>
                     <a-radio-button value="admin">管理员</a-radio-button>
                 </a-radio-group>
             </a-form-item>
